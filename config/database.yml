@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: Aa@123456
+  host: localhost
+development:
+  <<: *default
+  database: chatbot_payment_development
+test:
+  <<: *default
+  database: chatbot_payment_test
